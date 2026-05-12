@@ -87,7 +87,7 @@ function App() {
         </div>
       )}
 
-      <main>
+      <main className="max-sm:pt-12">
         <HeroSection
           showBanner={slots.belowHero}
           bannerHref={href}
