@@ -5,7 +5,7 @@ import { PromoBanner } from './PromoBanner'
  * Fixed below the sticky header and on the left so it never overlaps
  * logo / nav / cart / profile (does not consume navbar layout space).
  */
-export function BannerPlacementControls({ position, onChange, bannerHref }) {
+export function BannerPlacementControls({ position, onChange, onReselect, bannerHref }) {
   return (
     <aside
       className="fixed left-4 top-24 z-40 max-w-[min(100vw-2rem,22rem)] border border-tamay-rule bg-white/95 p-3 text-left shadow-xl backdrop-blur-sm sm:left-6 sm:top-28 lg:top-32"
@@ -32,6 +32,11 @@ export function BannerPlacementControls({ position, onChange, bannerHref }) {
               className="mt-0.5 accent-tamay"
               checked={position === slot.id}
               onChange={() => onChange(slot.id)}
+              onClick={() => {
+                if (position === slot.id) {
+                  onReselect?.(slot.id)
+                }
+              }}
             />
             <span className="text-tamay-ink">{slot.label}</span>
           </label>
@@ -51,10 +56,3 @@ export function BannerPlacementControls({ position, onChange, bannerHref }) {
   )
 }
 
-export function FloatingBanner({ href }) {
-  return (
-    <div className="fixed bottom-4 right-4 z-[55] flex w-[min(100vw-2rem,20rem)] justify-center">
-      <PromoBanner href={href} className="w-full" />
-    </div>
-  )
-}

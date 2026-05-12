@@ -1,6 +1,9 @@
 import { PromoBanner } from './PromoBanner'
 
-export function HeroSection({ showBanner, bannerHref }) {
+const bannerAnchorClass =
+  'mx-auto mt-10 flex w-full max-w-3xl justify-center scroll-mt-28 sm:scroll-mt-32'
+
+export function HeroSection({ showBanner, bannerHref, bannerScrollRef }) {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[1440px] px-4 pb-10 pt-6 text-center sm:px-10 sm:pb-14 sm:pt-8 lg:px-16 lg:pb-16">
@@ -25,7 +28,7 @@ export function HeroSection({ showBanner, bannerHref }) {
             </a>
           </div>
           {showBanner && (
-            <div className="mx-auto mt-10 flex w-full max-w-3xl justify-center">
+            <div ref={bannerScrollRef} className={bannerAnchorClass}>
               <PromoBanner href={bannerHref} />
             </div>
           )}

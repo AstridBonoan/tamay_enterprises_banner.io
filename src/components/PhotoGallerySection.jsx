@@ -43,7 +43,10 @@ function CarouselSlide({ slide }) {
   )
 }
 
-export function PhotoGallerySection({ showBanner, bannerHref }) {
+const bannerAnchorClass =
+  'mx-auto mb-8 flex w-full max-w-3xl justify-center scroll-mt-28 px-2 sm:scroll-mt-32'
+
+export function PhotoGallerySection({ showBanner, bannerHref, bannerScrollRef }) {
   const [index, setIndex] = useState(0)
   const total = CAROUSEL_SLIDES.length
 
@@ -67,7 +70,7 @@ export function PhotoGallerySection({ showBanner, bannerHref }) {
         <SectionHeading title="Photo Gallery" />
 
         {showBanner && (
-          <div className="mx-auto mb-8 flex w-full max-w-3xl justify-center px-2">
+          <div ref={bannerScrollRef} className={bannerAnchorClass}>
             <PromoBanner href={bannerHref} />
           </div>
         )}

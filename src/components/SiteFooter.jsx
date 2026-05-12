@@ -1,11 +1,14 @@
 import { NAV_FOOTER } from '../data/siteContent'
 import { PromoBanner } from './PromoBanner'
 
-export function SiteFooter({ showBanner, bannerHref }) {
+const bannerAnchorClass =
+  'mx-auto flex w-full max-w-[1440px] justify-center px-4 py-8 scroll-mt-28 sm:scroll-mt-32 sm:px-8 lg:px-16'
+
+export function SiteFooter({ showBanner, bannerHref, bannerScrollRef }) {
   return (
     <footer className="border-t border-tamay-rule bg-white">
       {showBanner && (
-        <div className="mx-auto flex w-full max-w-[1440px] justify-center px-4 py-8 sm:px-8 lg:px-16">
+        <div ref={bannerScrollRef} className={bannerAnchorClass}>
           <PromoBanner href={bannerHref} />
         </div>
       )}
