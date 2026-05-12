@@ -11,8 +11,8 @@ import { SiteFooter } from './components/SiteFooter'
 import { SiteHeader } from './components/SiteHeader'
 import { YearPromotionSection } from './components/YearPromotionSection'
 
-/** Estimator / appointments or your own tool — used by the cost CTA banner. */
-const DEFAULT_BANNER_HREF = 'https://tamayenterprises.com/online-appointments'
+/** Project cost estimator — used by the cost CTA banner. */
+const DEFAULT_BANNER_HREF = 'https://estimator.tamayenterprises.com/'
 
 function scrollBannerIntoView(el, slotId) {
   if (!el) return

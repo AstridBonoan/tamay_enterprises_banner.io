@@ -1,10 +1,10 @@
 /**
  * Cost / estimate CTA — uses Tamay palette (navy rgb(53,85,143), whites, soft grays)
  * like [tamayenterprises.com/gallery](https://tamayenterprises.com/gallery).
- * Pass `href` from `App.jsx` (e.g. estimator or online appointments).
+ * Pass `href` from `App.jsx` (defaults to [estimator.tamayenterprises.com](https://estimator.tamayenterprises.com/)).
  */
 export function PromoBanner({ href, className = '' }) {
-  const to = href ?? 'https://tamayenterprises.com/online-appointments'
+  const to = href ?? 'https://estimator.tamayenterprises.com/'
   return (
     <a
       href={to}
