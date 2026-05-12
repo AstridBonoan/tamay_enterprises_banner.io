@@ -1,21 +1,28 @@
 /**
- * Placeholder “your app” banner — swap `href` / copy when you know the final link.
- * Always horizontally centered (matches Tamay gallery strip + your reference).
+ * Cost / estimate CTA — uses Tamay palette (navy rgb(53,85,143), whites, soft grays)
+ * like [tamayenterprises.com/gallery](https://tamayenterprises.com/gallery).
+ * Pass `href` from `App.jsx` (e.g. estimator or online appointments).
  */
-export function PromoBanner({ href = 'https://example.com/your-app', className = '' }) {
+export function PromoBanner({ href, className = '' }) {
+  const to = href ?? 'https://tamayenterprises.com/online-appointments'
   return (
     <a
-      href={href}
+      href={to}
       target="_blank"
       rel="noopener noreferrer"
-      className={`mx-auto flex w-full max-w-3xl flex-col items-center justify-center gap-3 border border-[#e6e6e6] bg-white px-6 py-4 text-center shadow-sm no-underline transition hover:border-tamay hover:shadow-md sm:flex-row sm:gap-4 ${className}`}
+      className={`group mx-auto block w-full max-w-2xl overflow-hidden rounded-lg border border-[#dce3ee] bg-gradient-to-b from-[#f5f8fc] to-white text-center shadow-md no-underline transition hover:border-tamay hover:shadow-lg ${className}`}
     >
-      <span className="text-center text-sm font-semibold text-tamay-ink sm:text-base">
-        Your banner / sign — tap to open your web app
-      </span>
-      <span className="inline-flex min-h-8 shrink-0 items-center justify-center bg-tamay px-4 py-1.5 text-xs font-normal uppercase tracking-[0.071em] text-white">
-        Open link
-      </span>
+      <div className="h-1 bg-gradient-to-r from-tamay via-[rgb(69,109,181)] to-tamay" aria-hidden />
+      <div className="px-6 py-6 sm:px-8 sm:py-7">
+        <p className="font-display text-[1.25rem] font-normal leading-snug text-tamay sm:text-[1.4rem] sm:leading-tight">
+          Want To Check Out How Much Your Project Will Cost
+        </p>
+        <div className="mt-8 border-t border-tamay-rule/80 pt-8">
+          <span className="inline-flex min-h-11 w-full max-w-xs items-center justify-center rounded-sm bg-tamay px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-sm transition group-hover:bg-tamay-hover sm:w-auto sm:min-w-[12rem]">
+            Click Here
+          </span>
+        </div>
+      </div>
     </a>
   )
 }

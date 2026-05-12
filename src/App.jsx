@@ -13,8 +13,8 @@ import { SiteFooter } from './components/SiteFooter'
 import { SiteHeader } from './components/SiteHeader'
 import { YearPromotionSection } from './components/YearPromotionSection'
 
-/** Replace with your live web-app URL before you embed this on the real site. */
-const DEFAULT_BANNER_HREF = 'https://example.com/your-app'
+/** Estimator / appointments or your own tool — used by the cost CTA banner. */
+const DEFAULT_BANNER_HREF = 'https://tamayenterprises.com/online-appointments'
 
 function App() {
   const [cookiesOpen, setCookiesOpen] = useState(true)
