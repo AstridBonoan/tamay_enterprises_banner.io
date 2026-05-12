@@ -38,8 +38,8 @@ function App() {
       <SiteHeader />
 
       {slots.belowHeader && (
-        <div className="border-b border-tamay-rule bg-[rgb(247,249,252)]">
-          <div className="mx-auto max-w-[1280px] px-4 py-3 lg:px-6">
+        <div className="border-b border-[#e5e5e5] bg-[#f3f4f6]">
+          <div className="mx-auto flex w-full max-w-[1440px] justify-center px-4 py-4 sm:px-8 sm:py-5 lg:px-16">
             <PromoBanner href={href} />
           </div>
         </div>

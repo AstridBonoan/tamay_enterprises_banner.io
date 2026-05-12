@@ -67,7 +67,7 @@ export function PhotoGallerySection({ showBanner, bannerHref }) {
         <SectionHeading title="Photo Gallery" />
 
         {showBanner && (
-          <div className="mx-auto mb-8 max-w-3xl">
+          <div className="mx-auto mb-8 flex w-full max-w-3xl justify-center px-2">
             <PromoBanner href={bannerHref} />
           </div>
         )}

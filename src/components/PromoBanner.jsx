@@ -1,18 +1,19 @@
 /**
  * Placeholder “your app” banner — swap `href` / copy when you know the final link.
+ * Always horizontally centered (matches Tamay gallery strip + your reference).
  */
-export function PromoBanner({ href = 'https://example.com/your-app' }) {
+export function PromoBanner({ href = 'https://example.com/your-app', className = '' }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-wrap items-center justify-center gap-3 border border-tamay-rule bg-[rgb(247,249,252)] px-4 py-3 text-center no-underline shadow-sm transition hover:border-tamay hover:shadow-md sm:justify-between sm:text-left"
+      className={`mx-auto flex w-full max-w-3xl flex-col items-center justify-center gap-3 border border-[#e6e6e6] bg-white px-6 py-4 text-center shadow-sm no-underline transition hover:border-tamay hover:shadow-md sm:flex-row sm:gap-4 ${className}`}
     >
-      <span className="text-sm font-semibold text-tamay-ink sm:text-base">
+      <span className="text-center text-sm font-semibold text-tamay-ink sm:text-base">
         Your banner / sign — tap to open your web app
       </span>
-      <span className="inline-flex min-h-8 items-center justify-center bg-tamay px-3 py-1 text-xs font-normal uppercase tracking-[0.071em] text-white">
+      <span className="inline-flex min-h-8 shrink-0 items-center justify-center bg-tamay px-4 py-1.5 text-xs font-normal uppercase tracking-[0.071em] text-white">
         Open link
       </span>
     </a>

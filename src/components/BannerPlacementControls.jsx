@@ -35,10 +35,12 @@ export function BannerPlacementControls({ position, onChange, bannerHref }) {
       </div>
       {position !== 'none' && position !== 'floating-br' && (
         <div className="mt-3 border-t border-tamay-rule pt-3">
-          <p className="mb-2 text-[10px] font-bold uppercase tracking-wide text-tamay-muted">
+          <p className="mb-2 text-center text-[10px] font-bold uppercase tracking-wide text-tamay-muted">
             Mini preview
           </p>
-          <PromoBanner href={bannerHref} />
+          <div className="flex justify-center">
+            <PromoBanner href={bannerHref} className="max-w-[min(100%,18rem)]" />
+          </div>
         </div>
       )}
     </aside>
@@ -47,8 +49,8 @@ export function BannerPlacementControls({ position, onChange, bannerHref }) {
 
 export function FloatingBanner({ href }) {
   return (
-    <div className="fixed bottom-4 right-4 z-[55] w-[min(100vw-2rem,20rem)]">
-      <PromoBanner href={href} />
+    <div className="fixed bottom-4 right-4 z-[55] flex w-[min(100vw-2rem,20rem)] justify-center">
+      <PromoBanner href={href} className="w-full" />
     </div>
   )
 }

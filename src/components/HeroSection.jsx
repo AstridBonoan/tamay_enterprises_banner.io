@@ -25,7 +25,7 @@ export function HeroSection({ showBanner, bannerHref }) {
             </a>
           </div>
           {showBanner && (
-            <div className="mt-8 max-w-xl">
+            <div className="mx-auto mt-10 flex w-full max-w-3xl justify-center">
               <PromoBanner href={bannerHref} />
             </div>
           )}

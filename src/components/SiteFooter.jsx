@@ -5,7 +5,7 @@ export function SiteFooter({ showBanner, bannerHref }) {
   return (
     <footer className="border-t border-tamay-rule bg-white">
       {showBanner && (
-        <div className="mx-auto max-w-[1280px] px-4 py-8 lg:px-6">
+        <div className="mx-auto flex w-full max-w-[1440px] justify-center px-4 py-8 sm:px-8 lg:px-16">
           <PromoBanner href={bannerHref} />
         </div>
       )}
