@@ -1,10 +1,14 @@
 import { BANNER_SLOTS } from '../data/bannerSlots'
 import { PromoBanner } from './PromoBanner'
 
+/**
+ * Fixed below the sticky header and on the left so it never overlaps
+ * logo / nav / cart / profile (does not consume navbar layout space).
+ */
 export function BannerPlacementControls({ position, onChange, bannerHref }) {
   return (
     <aside
-      className="fixed right-4 top-4 z-[60] max-w-[min(100vw-2rem,22rem)] border border-tamay-rule bg-white/95 p-3 text-left shadow-xl backdrop-blur-sm"
+      className="fixed left-4 top-24 z-40 max-w-[min(100vw-2rem,22rem)] border border-tamay-rule bg-white/95 p-3 text-left shadow-xl backdrop-blur-sm sm:left-6 sm:top-28 lg:top-32"
       aria-label="Banner placement preview"
     >
       <p className="mb-2 text-xs font-bold uppercase tracking-[0.071em] text-tamay-muted">
