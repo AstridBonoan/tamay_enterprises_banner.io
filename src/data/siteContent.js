@@ -1,5 +1,5 @@
-/** Mirror of public nav targets on tamayenterprises.com (paths only for demo). */
-export const NAV_PRIMARY = [
+/** First row in header (matches live site + your reference). */
+export const NAV_INLINE = [
   { label: 'HOME', href: 'https://tamayenterprises.com/home' },
   { label: 'CONSTRUCTION', href: 'https://tamayenterprises.com/construction' },
   { label: 'REAL ESTATE', href: 'https://tamayenterprises.com/real-estate' },
@@ -8,6 +8,10 @@ export const NAV_PRIMARY = [
     label: 'HOME PREVENTIVE SERVICES',
     href: 'https://tamayenterprises.com/home-preventive-services-1',
   },
+]
+
+/** “Más” menu — remaining primary destinations. */
+export const NAV_MORE = [
   { label: 'REVIEWS', href: 'https://tamayenterprises.com/reviews' },
   { label: 'GALLERY', href: 'https://tamayenterprises.com/gallery', current: true },
   {
@@ -23,6 +27,8 @@ export const NAV_PRIMARY = [
     href: 'https://tamayenterprises.com/asssembly-&-installation',
   },
 ]
+
+export const NAV_PRIMARY = [...NAV_INLINE, ...NAV_MORE]
 
 export const NAV_FOOTER = [
   {
@@ -43,37 +49,35 @@ export const NAV_FOOTER = [
   },
 ]
 
-/** Six slides to match on-site “1/6” carousel indicator. */
+/** Paths under `public/gallery/` — your provided screenshots. */
 export const CAROUSEL_SLIDES = [
+  { title: 'Complete basement Renovation', image: 'gallery/slide-01.png' },
+  { title: 'Full Bathroom Renovation', image: 'gallery/slide-02.png' },
+  { title: 'Co-op apartment Renovation', image: 'gallery/slide-03.png' },
+  { title: 'Retaining wall', image: 'gallery/slide-04.png' },
+  { title: 'Bathroom remodeling', image: 'gallery/slide-05.png' },
+  { title: 'Full basement transformation', image: 'gallery/slide-06.png' },
+]
+
+export const GALLERY_PROJECT_BLOCKS = [
   {
-    title: 'Complete basement Renovation',
-    image:
-      'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1400&q=80&auto=format&fit=crop',
+    kind: 'twin',
+    title: 'CO-OP APARTMENT RENOVATION',
+    caption: 'Apartment Transformation - Bridgeport, CT',
+    left: 'gallery/grid-coop-left.png',
+    right: 'gallery/grid-coop-right.png',
   },
   {
-    title: 'Full Bathroom Renovation',
-    image:
-      'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1400&q=80&auto=format&fit=crop',
+    kind: 'single',
+    title: 'RETAINING WALL',
+    image: 'gallery/slide-04.png',
   },
   {
-    title: 'Co-op apartment Renovation',
-    image:
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1400&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'Retaining wall',
-    image:
-      'https://images.unsplash.com/photo-1599423300746-b62533397364?w=1400&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'Bathroom remodeling',
-    image:
-      'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1400&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'Full basement transformation',
-    image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80&auto=format&fit=crop',
+    kind: 'twin',
+    title: 'BATHROOM REMODELING',
+    caption: 'Bathroom Renovation- Wilton, CT',
+    left: 'gallery/grid-bath-left.png',
+    right: 'gallery/grid-bath-right.png',
   },
 ]
 

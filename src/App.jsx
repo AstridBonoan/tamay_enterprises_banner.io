@@ -4,6 +4,7 @@ import {
   FloatingBanner,
 } from './components/BannerPlacementControls'
 import { CookieBanner } from './components/CookieBanner'
+import { FloatingSiteChrome } from './components/FloatingSiteChrome'
 import { HeroSection } from './components/HeroSection'
 import { InstagramSection } from './components/InstagramSection'
 import { PhotoGallerySection } from './components/PhotoGallerySection'
@@ -67,6 +68,8 @@ function App() {
         onChange={setBannerPosition}
         bannerHref={href}
       />
+
+      <FloatingSiteChrome />
     </div>
   )
 }

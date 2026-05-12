@@ -1,13 +1,13 @@
 /**
- * Matches GoDaddy “HeadingBeta” blocks: Cinzel ~28px, brand blue, centered, HR below.
+ * Centered serif section title + rule (matches gallery project blocks on live site).
  */
 export function SectionHeading({ title }) {
   return (
-    <header className="mb-10 text-center">
-      <h2 className="font-cinzel text-[28px] font-normal leading-[1.4] text-tamay">
+    <header className="mb-8 text-center sm:mb-10">
+      <h2 className="font-display text-[clamp(1.15rem,2.5vw,1.5rem)] font-normal uppercase leading-snug tracking-[0.12em] text-tamay">
         {title}
       </h2>
-      <hr className="mx-auto mt-6 max-w-[min(100%,28rem)] border-0 border-b-2 border-tamay-rule" />
+      <hr className="mx-auto mt-4 max-w-[10rem] border-0 border-b border-[#d0d0d0]" />
     </header>
   )
 }
