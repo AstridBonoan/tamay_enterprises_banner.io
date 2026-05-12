@@ -1,13 +1,9 @@
-import { forwardRef } from 'react'
 import { PromoBanner } from './PromoBanner'
 
-export const FloatingBanner = forwardRef(function FloatingBanner({ href }, ref) {
+export function FloatingBanner({ href }) {
   return (
-    <div
-      ref={ref}
-      className="fixed bottom-[calc(1rem+3.5rem+0.75rem)] right-4 z-[55] flex h-[min(18rem,calc(100vw-2rem),38vmin,min(50dvh,calc(100dvh-8rem)))] w-[min(18rem,calc(100vw-2rem),38vmin,min(50dvh,calc(100dvh-8rem)))] max-w-[calc(100vw-2rem)] justify-center scroll-mt-8 sm:bottom-[calc(1.5rem+3.5rem+0.75rem)] sm:right-6"
-    >
-      <PromoBanner href={href} className="h-full min-h-0 w-full" floatingSquare />
+    <div className="fixed bottom-4 right-4 z-50 flex h-[min(18rem,calc(100vw-2rem),38vmin,min(50dvh,calc(100dvh-8rem)))] w-[min(18rem,calc(100vw-2rem),38vmin,min(50dvh,calc(100dvh-8rem)))] max-w-[calc(100vw-2rem)] justify-center sm:bottom-6 sm:right-6">
+      <PromoBanner href={href} className="h-full min-h-0 w-full" />
     </div>
   )
-})
+}

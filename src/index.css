@@ -1,13 +1,11 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Source Sans Pro', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-cinzel: 'Cinzel', Georgia, 'Times New Roman', serif;
   --color-tamay: rgb(53, 85, 143);
   --color-tamay-hover: rgb(43, 70, 119);
   --color-tamay-ink: rgb(27, 27, 27);
-  --color-tamay-muted: rgb(94, 94, 94);
   --color-tamay-rule: rgb(226, 226, 226);
 }
 
