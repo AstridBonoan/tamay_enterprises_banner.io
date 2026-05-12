@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { CAROUSEL_SLIDES, GALLERY_HEADINGS } from '../data/siteContent'
 import { PromoBanner } from './PromoBanner'
+import { SectionHeading } from './SectionHeading'
 
 export function PhotoGallerySection({ showBanner, bannerHref }) {
   const [index, setIndex] = useState(0)
@@ -22,22 +23,17 @@ export function PhotoGallerySection({ showBanner, bannerHref }) {
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-10 lg:px-6">
-        <div className="flex flex-col items-center gap-2 text-center">
-          <h2 className="text-2xl font-semibold text-neutral-900 sm:text-3xl">
-            Photo Gallery
-          </h2>
-          <div className="h-px w-24 bg-neutral-300" />
-        </div>
+      <div className="mx-auto max-w-[1280px] px-4 py-10 lg:px-6 lg:py-14">
+        <SectionHeading title="Photo Gallery" />
 
         {showBanner && (
-          <div className="mx-auto mt-8 max-w-3xl">
+          <div className="mx-auto mb-8 max-w-3xl">
             <PromoBanner href={bannerHref} />
           </div>
         )}
 
-        <div className="relative mx-auto mt-10 max-w-4xl">
-          <div className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm">
+        <div className="relative mx-auto max-w-4xl">
+          <div className="overflow-hidden rounded-sm border border-tamay-rule bg-[rgb(245,245,245)]">
             <div className="relative aspect-[16/10] w-full">
               <img
                 key={slide.image}
@@ -45,30 +41,30 @@ export function PhotoGallerySection({ showBanner, bannerHref }) {
                 alt=""
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-16">
-                <h3 className="text-left text-lg font-semibold text-white sm:text-xl">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-4 pb-4 pt-16">
+                <h3 className="text-left font-cinzel text-xl font-normal text-white sm:text-2xl">
                   {slide.title}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div className="mt-3 flex items-center justify-between gap-4">
+          <div className="mt-4 flex items-center justify-between gap-4">
             <button
               type="button"
               onClick={() => go(-1)}
-              className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
+              className="inline-flex min-h-10 min-w-10 items-center justify-center border border-tamay-rule bg-white text-lg text-tamay-ink transition hover:bg-[rgb(247,247,247)]"
               aria-label="Previous slide"
             >
               ‹
             </button>
-            <span className="text-sm font-semibold text-neutral-700">
+            <span className="text-sm font-semibold text-tamay-muted">
               {index + 1}/{total}
             </span>
             <button
               type="button"
               onClick={() => go(1)}
-              className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
+              className="inline-flex min-h-10 min-w-10 items-center justify-center border border-tamay-rule bg-white text-lg text-tamay-ink transition hover:bg-[rgb(247,247,247)]"
               aria-label="Next slide"
             >
               ›
@@ -82,7 +78,7 @@ export function PhotoGallerySection({ showBanner, bannerHref }) {
                 type="button"
                 onClick={() => setIndex(i)}
                 className={`h-2 w-2 rounded-full transition ${
-                  i === index ? 'bg-neutral-900' : 'bg-neutral-300 hover:bg-neutral-400'
+                  i === index ? 'bg-tamay' : 'bg-tamay-rule hover:bg-tamay-muted'
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
@@ -90,10 +86,10 @@ export function PhotoGallerySection({ showBanner, bannerHref }) {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-3xl space-y-6">
+        <div className="mx-auto mt-14 max-w-3xl space-y-8">
           {GALLERY_HEADINGS.map((title) => (
             <div key={title}>
-              <h3 className="border-b border-neutral-200 pb-2 text-center text-lg font-semibold text-neutral-900 sm:text-xl">
+              <h3 className="border-b border-tamay-rule pb-2 text-center font-cinzel text-xl font-normal text-tamay sm:text-2xl">
                 {title}
               </h3>
             </div>

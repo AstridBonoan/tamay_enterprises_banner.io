@@ -1,7 +1,9 @@
 import { SOCIAL_LINKS } from '../data/siteContent'
+import { SectionHeading } from './SectionHeading'
 
 function SocialIcon({ label }) {
-  const common = 'flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50'
+  const common =
+    'flex h-11 w-11 items-center justify-center rounded-full border border-tamay-rule bg-white text-tamay transition hover:border-tamay hover:bg-[rgb(247,247,247)]'
   if (label === 'Facebook') {
     return (
       <span className={common} aria-hidden>
@@ -40,11 +42,10 @@ function SocialIcon({ label }) {
 
 export function InstagramSection() {
   return (
-    <section className="border-t border-neutral-200 bg-neutral-50">
-      <div className="mx-auto max-w-6xl px-4 py-12 text-center lg:px-6">
-        <h2 className="text-2xl font-semibold text-neutral-900">Instagram</h2>
-        <div className="mx-auto mt-4 h-px w-24 bg-neutral-300" />
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+    <section className="border-t border-tamay-rule bg-white">
+      <div className="mx-auto max-w-[1280px] px-4 py-12 lg:px-6 lg:py-14">
+        <SectionHeading title="Instagram" />
+        <div className="mt-8 flex flex-wrap justify-center gap-5">
           {SOCIAL_LINKS.map((s) => (
             <a
               key={s.label}

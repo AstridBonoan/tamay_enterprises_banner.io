@@ -33,12 +33,12 @@ function App() {
   )
 
   return (
-    <div className="min-h-svh bg-white text-neutral-900">
+    <div className="min-h-svh bg-white text-tamay-ink antialiased">
       <SiteHeader />
 
       {slots.belowHeader && (
-        <div className="border-b border-amber-200/80 bg-amber-50/90">
-          <div className="mx-auto max-w-6xl px-4 py-3 lg:px-6">
+        <div className="border-b border-tamay-rule bg-[rgb(247,249,252)]">
+          <div className="mx-auto max-w-[1280px] px-4 py-3 lg:px-6">
             <PromoBanner href={href} />
           </div>
         </div>

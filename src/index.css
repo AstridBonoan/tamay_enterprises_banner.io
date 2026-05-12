@@ -1,12 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
-  --color-brand-dark: #1a1a1a;
-  --color-brand-muted: #4a4a4a;
-  --color-brand-border: #e0e0e0;
-  --color-brand-accent: #c41e3a;
+  --font-sans: 'Source Sans Pro', ui-sans-serif, system-ui, sans-serif;
+  --font-cinzel: 'Cinzel', Georgia, 'Times New Roman', serif;
+  --color-tamay: rgb(53, 85, 143);
+  --color-tamay-hover: rgb(43, 70, 119);
+  --color-tamay-ink: rgb(27, 27, 27);
+  --color-tamay-muted: rgb(94, 94, 94);
+  --color-tamay-rule: rgb(226, 226, 226);
 }
 
 html {
@@ -16,5 +17,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-tamay-ink);
   -webkit-font-smoothing: antialiased;
 }
